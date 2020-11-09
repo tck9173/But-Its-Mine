@@ -66,3 +66,6 @@
 #### Forum
 ![forum](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Forum.png)
 
+### User Stories
+* I had no idea where to start when building a PC. This site guided me in the right direction.
+* I did not know why PCs were so much better than consoles. Now I do!
