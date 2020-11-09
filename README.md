@@ -2,8 +2,6 @@
 
 # PC Building Guide and Part Picker
 
-## Guide
-
 ### Build Guide
 
 * Why PC? And why build your own?
@@ -31,6 +29,8 @@
 * Repairs?
 
 ### Build Forum
+
+* Post questions and personal builds, comment and react to other peoples builds
 
 * ERD:
     * Table for post
