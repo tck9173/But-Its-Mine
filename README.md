@@ -69,3 +69,5 @@
 ### User Stories
 * I had no idea where to start when building a PC. This site guided me in the right direction.
 * I did not know why PCs were so much better than consoles. Now I do!
+* This site allows me to ask questions to a great community!
+* This helped so much with my budgeting! I did not realize there were so many things to plan for.
