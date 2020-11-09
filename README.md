@@ -42,6 +42,17 @@
 
 #### Bronze
 
+* Simple planning and build guide
+* Embedded Videos for building PC
+* Simple budgeting tool
+
 #### Silver
 
+* Forum to post own builds and ask questions
+* Search feature for build videos (New API call)
+
 #### Gold
+
+* Downloadable EXE budgeting tool
+* Login/User feature for Forum
+* Part search API
