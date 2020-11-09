@@ -2,11 +2,12 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header'
 import Navigation from './components/Navigation';
-import BuildContainer from './components/BuildContainer';
+import BuildContainer from './components/Build/BuildContainer';
 import {Route, Switch, withRouter} from 'react-router-dom';
-import PlanningContainer from './components/PlanningContainer';
-import StartContainer from './components/StartContainer';
-import ForumContainer from './components/ForumContainer';
+import PlanningContainer from './components/Planning/PlanningContainer';
+import StartContainer from './components/Start/StartContainer';
+import ForumContainer from './components/Forum/ForumContainer';
+import Homepage from './components/Homepage';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className = "contentContainer">
         <Navigation />
         <Switch>
+          <Route exact path = '/' component = {Homepage} />
           <Route path = '/start' component = {StartContainer} />
           <Route path = '/planning' component = {PlanningContainer} />
           <Route path = '/build' component = {BuildContainer} />
