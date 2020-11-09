@@ -1,4 +1,4 @@
-# But Its Mine
+# But It's Mine
 
 # PC Building Guide and Part Picker
 
