@@ -1,4 +1,4 @@
-# GA-Project-4
+# But Its Mine
 
 # PC Building Guide and Part Picker
 
@@ -32,11 +32,8 @@
 
 * Post questions and personal builds, comment and react to other peoples builds
 
-* ERD:
-    * Table for post
-    * Table for comments
-    * Table for reactions?
-    * Table for categories
+### ERD
+![erd](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/ERD.png)
 
 ### Goals
 
@@ -56,3 +53,14 @@
 * Downloadable EXE budgeting tool
 * Login/User feature for Forum
 * Part search API
+
+### Wireframe
+##### Main Page
+![main page](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Main%20Page.png)
+
+##### Build Guide
+![build guide](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Build%20Guide.png)
+
+##### Forum
+![forum](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Forum.png)
+
