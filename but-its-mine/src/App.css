@@ -1,5 +1,33 @@
+/* color picker:
+  light grey: eeeeee
+  dark grey: 222831
+  teal: 4f8a8b
+  orange-yellow: fbd46d */
+
+html {
+  background-color: #222831;
+  color: #eeeeee
+}
+
+
+
 .header {
   height: 5vh;
+  background-color: #4f8a8b
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white
+}
+
+a:hover {
+  color: #fbd46d;
 }
 
 .contentContainer {
@@ -11,6 +39,9 @@
   flex-flow: column;
   width: 15vw;
   max-width: 200px;
+  height: 93vh;
+  border-right: solid #fbd46d 2px;
+  padding: 10px;
 }
 
 .main {
@@ -18,6 +49,6 @@
   max-width: 1000px;
   height: 93vh;
   overflow-y: auto;
-  margin-left: 20px;
+  padding-left: 20px;
 
 }

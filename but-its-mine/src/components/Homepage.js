@@ -2,7 +2,7 @@ import React from 'react';
 
 function Homepage() {
     return (
-        <div>
+        <div className = 'main'>
             <p>This is a homepage</p>
         </div>
     )
