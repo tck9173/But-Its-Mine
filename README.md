@@ -55,12 +55,12 @@
 * Part search API
 
 ### Wireframe
-##### Main Page
+#### Main Page
 ![main page](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Main%20Page.png)
 
-##### Build Guide
+#### Build Guide
 ![build guide](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Build%20Guide.png)
 
-##### Forum
+#### Forum
 ![forum](https://github.com/tck9173/But-Its-Mine/blob/main/Planning/Forum.png)
 
