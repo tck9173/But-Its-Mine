@@ -37,3 +37,11 @@
     * Table for comments
     * Table for reactions?
     * Table for categories
+
+### Goals
+
+#### Bronze
+
+#### Silver
+
+#### Gold
