@@ -2,7 +2,7 @@
 
 # PC Building Guide and Part Picker
 
-### Build Guide
+### Before you begin
 
 * Why PC? And why build your own?
 * Planning
@@ -10,23 +10,25 @@
 
 ### Picking parts
 
-* Budgeting tool exe?
+* Budgeting tool
 * Example builds
-* Best Buy API search?
+* Best Buy API search
 * Expected performance
 * Search for reviews?
+* Plan for peripherals 
 
 ### Build
 
 * Embedded YouTube videos for building
 * Videos for after your build
-* Troubleshooting guide?
-* Search for videos?
+* Troubleshooting guide
+* Search for videos
 
 ### Next steps
 
 * Planning for upgrades
-* Repairs?
+* Suggested games
+* Suggested uses
 
 ### Build Forum
 
@@ -47,11 +49,11 @@
 
 * Forum to post own builds and ask questions
 * Search feature for build videos (New API call)
+* Login/User feature for Forum
 
 #### Gold
 
 * Downloadable EXE budgeting tool
-* Login/User feature for Forum
 * Part search API
 
 ### Wireframe
