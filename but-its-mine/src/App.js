@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Header from './components/Header'
 import Navigation from './components/Navigation';
@@ -10,25 +10,41 @@ import ForumContainer from './components/Forum/ForumContainer';
 import Homepage from './components/Homepage';
 import BudgetTool from './components/Planning/BudgetTool';
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-      <div className = "contentContainer">
-        <Navigation />
-        <Switch>
-          <Route exact path = '/' component = {Homepage} />
-          <Route path = '/start' component = {StartContainer} />
-          <Route exact path = '/planning' component = {PlanningContainer} />
-          <Route path = '/planning/budget-tool' component = {BudgetTool} />
-          <Route path = '/build' component = {BuildContainer} />
-          <Route path = '/forum' component = {ForumContainer} />
-        </Switch>
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      activePage: 'homepage'
+    }
+  }
+
+  setActivePage = (activePage) => {
+    this.setState({
+        activePage
+    })
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <div className = "contentContainer">
+          <Navigation setActivePage={this.setActivePage} activePage={this.state.activePage}/>
+          <Switch>
+            <Route exact path = '/' component = {Homepage} />
+            <Route path = '/start' component = {StartContainer} />
+            <Route exact path = '/planning' component = {PlanningContainer} />
+            <Route path = '/planning/budget-tool' component = {BudgetTool} />
+            <Route path = '/build' component = {BuildContainer} />
+            <Route path = '/forum' component = {ForumContainer} />
+          </Switch>
+          
+        </div>
         
       </div>
-      
-    </div>
-  );
+    );
+  }
 }
 
 export default App;

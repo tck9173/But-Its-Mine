@@ -44,6 +44,11 @@ a:hover {
   padding: 10px;
 }
 
+.active {
+ background-color: #4f8a8b;
+}
+
+
 .main {
   width: 85vw;
   max-width: 1000px;

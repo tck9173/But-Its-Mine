@@ -7,14 +7,14 @@ function BuildItem(props) {
                 width="508" 
                 height="284" 
                 src={props.src}
-                frameborder="0" 
+                frameBorder="0" 
                 allow="accelerometer; 
                 autoplay; 
-                clipboard-write; 
                 encrypted-media; 
                 gyroscope; 
                 picture-in-picture" 
-                allowfullscreen
+                allowFullScreen
+                title={props.src}
             >
             </iframe>
         </div>
