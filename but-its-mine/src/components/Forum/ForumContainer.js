@@ -35,9 +35,7 @@ function ForumContainer() {
             <h2>Forum</h2>
             {posts.map((post, index) => {
                 return (
-                    <div>
-                        <ForumItem post = {post} key={index}/>
-                    </div>
+                    <ForumItem post = {post} key={index}/>
                 )
             })}
         </div>
