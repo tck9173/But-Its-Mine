@@ -26,11 +26,13 @@ class RegisterForm extends Component {
                     type = 'text'
                     name='name'
                     value={this.state.name}
+                    placeholder='Name'
                     onChange={this.handleChange}
                 />
                 <input
                     type = 'text'
                     name='username'
+                    placeholder='Username'
                     value={this.state.username}
                     onChange={this.handleChange}
                 />

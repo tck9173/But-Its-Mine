@@ -27,16 +27,18 @@ class LoginForm extends Component {
                     type = 'text'
                     name='username'
                     value={this.state.username}
+                    placeholder= 'Username'
                     onChange={this.handleChange}
                 />
                 <input
                     type = 'password'
                     name='password'
+                    placeholder='Password'
                     value={this.state.password}
                     onChange={this.handleChange}
                 />
                 <input type ='submit' value='Login'/>
-                <Link to='/register'>Register</Link>
+                <Link to='/register'><button>Register</button></Link>
             </form>
         )
     }
