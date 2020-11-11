@@ -7,7 +7,8 @@ class CreatePostForm extends Component {
         this.state ={
             title: '',
             body: '',
-            userId: ''
+            userId: this.props.currentUser,
+            img:''
         }
     }
 
@@ -27,8 +28,8 @@ class CreatePostForm extends Component {
                 />
                 <input
                     type='text'
-                    name='userId'
-                    value={this.state.userId}
+                    name='img'
+                    value={this.state.img}
                     onChange={this.handleChange}
                 />
                 <input

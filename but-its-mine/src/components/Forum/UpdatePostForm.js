@@ -19,11 +19,11 @@ class UpdatePostForm extends Component {
 
     componentDidMount() {
         const postToEdit = this.props.posts.find(post => post.id === parseInt(this.props.postId));
-        console.log(postToEdit);
         this.setState({
             title: postToEdit.title,
             userId: postToEdit.userId,
-            body: postToEdit.body
+            body: postToEdit.body,
+            img: postToEdit.img
         })
     }
 
@@ -42,8 +42,8 @@ class UpdatePostForm extends Component {
                     />
                     <input
                         type='text'
-                        name='userId'
-                        value={this.state.userId}
+                        name='img'
+                        value={this.state.img}
                         onChange={this.handleChange}
                     />
                     <input
@@ -54,6 +54,11 @@ class UpdatePostForm extends Component {
                     />
                     <input type='submit' value='Update a Post' />
                 </form>
+                {this.state.img && <div>   
+                    <p>Image preview</p>
+                    <img src={this.state.img} alt='preview'/>
+                </div>
+                }
             </div>
         )
     }

@@ -33,7 +33,7 @@ class App extends Component {
     e.preventDefault();
     const currentUser = await registerUser(registerData);
     this.setState({currentUser})
-    this.props.history.push('/forum');
+    this.props.history.push('/forum/posts');
   }
 
   handleLogin = async (e, loginData) => {
@@ -41,7 +41,7 @@ class App extends Component {
     const currentUser = await loginUser(loginData);
     console.log(currentUser)
     this.setState({currentUser})
-    this.props.history.push('/forum');
+    this.props.history.push('/forum/posts');
   }
 
   handleLogout = () => {
@@ -85,7 +85,9 @@ class App extends Component {
             <Route exact path = '/planning' component = {PlanningContainer} />
             <Route path = '/planning/budget-tool' component = {BudgetTool} />
             <Route path = '/build' component = {BuildContainer} />
-            <Route path = '/forum' component = {ForumContainer} />
+            <Route path = '/forum' render={() => (
+              <ForumContainer currentUser={this.state.currentUser.id}/>
+            )} />
           </Switch>
           
         </div>

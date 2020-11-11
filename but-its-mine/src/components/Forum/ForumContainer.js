@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route} from 'react-router-dom';
+import {Route, withRouter} from 'react-router-dom';
 
 import { indexPosts, postPost, putPost, destroyPost} from '../../services/api_helper';
 
@@ -14,13 +14,19 @@ class ForumContainer extends Component {
         super(props);
 
         this.state = {
-            posts: null
+            posts: null,
+            comments: null
         }
     }
 
     readAllPosts = async () => {
         const posts = await indexPosts();
         this.setState({posts})
+    }
+
+    readAllComments = async () => {
+        const comments = await indexComments();
+        this.setState({comments})
     }
 
     createPost = async (e,postData) => {
@@ -32,6 +38,16 @@ class ForumContainer extends Component {
             posts: newPosts
         })
         this.props.history.push('/forum/posts');
+    }
+
+    createComment = async (e,commentData) => {
+        e.preventDefault();
+        const newComment = await postComment(commentData);
+        const comments = this.state.comments;
+        const newComments = [... comments, newComment];
+        this.setState({
+            comments: newComments
+        })
     }
 
     updatePost = async (e,id, postData) => {
@@ -66,13 +82,15 @@ class ForumContainer extends Component {
                     <PostList posts={this.state.posts} />
                 )} />
                 <Route path='/forum/posts/new' render={() => (
-                    <CreatePostForm createPost={this.createPost} />
+                    <CreatePostForm createPost={this.createPost} currentUser={this.props.currentUser}/>
                 )} />
                 <Route exact path='/forum/posts/:id' render={(props) => (
                     <PostItem
                         posts={this.state.posts}
                         postId={props.match.params.id}
                         deletePost={this.deletePost}
+                        currentUser={this.props.currentUser}
+                        createComment = {this.createComment}
                     />
                 )} />
                 <Route path = '/forum/posts/:id/edit' render ={(props) => (
@@ -87,4 +105,4 @@ class ForumContainer extends Component {
     }
 }
 
-export default ForumContainer
+export default withRouter(ForumContainer);

@@ -34,13 +34,23 @@ export const indexPosts = async () => {
     return resp.data
 }
 
+export const indexComments = async () => {
+    const resp = await api.get('/forum/posts/all/comments');
+    return resp.data
+}
+
 export const postPost = async (postData) => {
     const resp = await api.post('/forum/posts', postData);
     return resp.data;
 }
 
+export const postComment = async (postData) => {
+    const resp = await api.post('/forum/posts/comments', postData);
+    return resp.data;
+}
+
 export const putPost = async (postId, postData) => {
-    const resp = await api.put(`/forum/posts/${postId}`, postData)
+    const resp = await api.put(`/forum/posts/${parseInt(postId)}`, postData)
     return resp.data;
 }
 
