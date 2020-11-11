@@ -12,9 +12,13 @@ html {
 
 
 .header {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
   height: 5vh;
   background-color: #4f8a8b;
   min-height: 40px;
+
 }
 
 .header h1 {
@@ -29,6 +33,10 @@ html {
   }
 }
 
+.userWelcome {
+  display: flex;
+  flex-flow: row;
+}
 
 a {
   text-decoration: none;
