@@ -28,3 +28,22 @@ export const verifyUser = async () => {
     }
     return false
 }
+
+export const indexPosts = async () => {
+    const resp = await api.get('/forum/posts/all');
+    return resp.data
+}
+
+export const postPost = async (postData) => {
+    const resp = await api.post('/forum/posts', postData);
+    return resp.data;
+}
+
+export const putPost = async (postId, postData) => {
+    const resp = await api.put(`/forum/posts/${postId}`, postData)
+    return resp.data;
+}
+
+export const destroyPost = async (id) => {
+    await api.delete(`/forum/posts/${id}`);
+}
