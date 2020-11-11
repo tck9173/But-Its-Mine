@@ -4,6 +4,7 @@ import CreateCommentForm from './CreateCommentForm';
 
 const PostItem = (props) => {
     const currentPost = props.posts.find(post => post.id === parseInt(props.postId));
+    const comments = props.comments.filter(comment => comment.postId === parseInt(props.postId))
     return (
         <div>
             <Link 
@@ -18,6 +19,11 @@ const PostItem = (props) => {
                 <button onClick={() => props.deletePost(currentPost.id)}>Delete</button>
                 <Link to={`/forum/posts/${currentPost.id}/edit`}><button>Edit</button></Link>
                 <CreateCommentForm currentPost={currentPost.id} userId={props.currentUser} createComment={props.createComment}/>
+                {comments.map((comment, index) => {
+                    return (
+                        <p>{comment.body}</p>
+                    )
+                })}
                 </>
             )}
         </div>

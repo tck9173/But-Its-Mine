@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Route, withRouter} from 'react-router-dom';
 
-import { indexPosts, postPost, putPost, destroyPost} from '../../services/api_helper';
+import { indexPosts, indexComments, postPost, postComment, putPost, destroyPost} from '../../services/api_helper';
 
 
 import CreatePostForm from './CreatePostForm';
@@ -73,13 +73,14 @@ class ForumContainer extends Component {
 
     componentDidMount() {
         this.readAllPosts();
+        this.readAllComments();
     }
 
     render() {
         return (
             <div className='main'>
                 <Route exact path='/forum/posts' render={() => (
-                    <PostList posts={this.state.posts} />
+                    <PostList posts={this.state.posts} comments={this.state.comments}/>
                 )} />
                 <Route path='/forum/posts/new' render={() => (
                     <CreatePostForm createPost={this.createPost} currentUser={this.props.currentUser}/>
@@ -87,6 +88,7 @@ class ForumContainer extends Component {
                 <Route exact path='/forum/posts/:id' render={(props) => (
                     <PostItem
                         posts={this.state.posts}
+                        comments={this.state.comments}
                         postId={props.match.params.id}
                         deletePost={this.deletePost}
                         currentUser={this.props.currentUser}
