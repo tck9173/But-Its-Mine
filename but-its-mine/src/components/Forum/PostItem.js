@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import CreateCommentForm from './CreateCommentForm';
+import CommentList from './CommentList';
 
 const PostItem = (props) => {
     const currentPost = props.posts.find(post => post.id === parseInt(props.postId));
@@ -19,11 +20,7 @@ const PostItem = (props) => {
                 <button onClick={() => props.deletePost(currentPost.id)}>Delete</button>
                 <Link to={`/forum/posts/${currentPost.id}/edit`}><button>Edit</button></Link>
                 <CreateCommentForm currentPost={currentPost.id} userId={props.currentUser} createComment={props.createComment}/>
-                {comments.map((comment, index) => {
-                    return (
-                        <p>{comment.body}</p>
-                    )
-                })}
+                <CommentList comments={comments}/>
                 </>
             )}
         </div>
