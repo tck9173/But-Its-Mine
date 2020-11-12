@@ -53,7 +53,7 @@ class App extends Component {
   handleVerify = async () => {
     const currentUser = await verifyUser();
     if (currentUser) {
-      this.setState({ currentUser: test})
+      this.setState({ currentUser})
     }
   }
 
