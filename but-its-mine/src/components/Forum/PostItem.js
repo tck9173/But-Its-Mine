@@ -13,13 +13,21 @@ const PostItem = (props) => {
             ><button>Back to all posts</button></Link>
             {currentPost && (
                 <>
-                <h1>{currentPost.title}</h1>
-                <p>{currentPost.userId}</p>
-                <p>{currentPost.body}</p>
-                <img src={currentPost.img} alt={currentPost.title}/>
-                <button onClick={() => props.deletePost(currentPost.id)}>Delete</button>
-                <Link to={`/forum/posts/${currentPost.id}/edit`}><button>Edit</button></Link>
-                <CreateCommentForm currentPost={currentPost.id} userId={props.currentUser} createComment={props.createComment}/>
+                <div className='postItemHeader'>
+                    <h1>{currentPost.title}</h1> 
+                    {currentPost.User.id === props.currentUser.id 
+                    && 
+                        <div>
+                            <button onClick={() => props.deletePost(currentPost.id)}>Delete</button>
+                            <Link to={`/forum/posts/${currentPost.id}/edit`}><button>Edit</button></Link>
+                        </div>
+                    }
+                </div>
+                <h3>Posted by: {currentPost.User.username}</h3>
+                <img src={currentPost.img} alt={currentPost.title} className='postItemImg'/>
+                
+                <p>{currentPost.body}</p>                
+                <CreateCommentForm currentPost={currentPost.id} userId={props.currentUser.id} createComment={props.createComment}/>
                 <CommentList comments={comments}/>
                 </>
             )}

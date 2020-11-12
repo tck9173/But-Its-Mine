@@ -74,3 +74,69 @@ a:hover {
   padding-left: 20px;
 
 }
+
+.postListItem {
+  display: flex;
+  flex-flow: row;
+}
+
+.postListImgContainer {
+  width:150px;
+  height:150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.postListImg {
+  max-height: 150px;
+  max-width: 150px;
+}
+
+.postItemHeader {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.postItemImg {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.createPostForm {
+  display: flex;
+  flex-flow: column;
+  width: 400px;
+  height: 400px;
+  margin-left: 20px;
+}
+
+.createPostFormInput {
+  width:394px;
+  margin: 0;
+}
+
+.createPostForm textarea {
+  width: 394px;
+  height: 150px;
+}
+
+.createPostFormSubmit {
+  width: 50px;
+}
+
+.createPostFormWrapper {
+  display: flex;
+  flex-flow: row;
+}
+
+.createPostFormPreviewWrapper {
+  margin:0 20px 0 20px;
+}
+
+.createPostFormPreviewImg {
+  max-height: 340px;
+}

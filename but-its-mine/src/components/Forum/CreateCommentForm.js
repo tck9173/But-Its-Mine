@@ -23,6 +23,7 @@ class CreateCommentForm extends Component {
                     type='textarea'
                     name='body'
                     value={this.state.body}
+                    required
                     onChange={this.handleChange}
                 />
                 <input type='submit' value='Comment!' />

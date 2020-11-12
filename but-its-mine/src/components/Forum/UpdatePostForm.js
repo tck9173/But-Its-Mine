@@ -46,8 +46,8 @@ class UpdatePostForm extends Component {
                         value={this.state.img}
                         onChange={this.handleChange}
                     />
-                    <input
-                        type='textarea'
+                    <textarea
+                        type='text'
                         name='body'
                         value={this.state.body}
                         onChange={this.handleChange}

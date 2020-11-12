@@ -7,7 +7,7 @@ class CreatePostForm extends Component {
         this.state ={
             title: '',
             body: '',
-            userId: this.props.currentUser,
+            userId: this.props.currentUser.id,
             img:''
         }
     }
@@ -19,27 +19,50 @@ class CreatePostForm extends Component {
 
     render() {
         return(
-            <form onSubmit={(e) => this.props.createPost(e, this.state)}>
-                <input
-                    type='text'
-                    name='title'
-                    value={this.state.title}
-                    onChange={this.handleChange}
-                />
-                <input
-                    type='text'
-                    name='img'
-                    value={this.state.img}
-                    onChange={this.handleChange}
-                />
-                <input
-                    type='textarea'
-                    name='body'
-                    value={this.state.body}
-                    onChange={this.handleChange}
-                />
-                <input type='submit' value='Post It!' />
-            </form>
+            <div className='createPostFormWrapper'>
+                <form className = 'createPostForm' onSubmit={(e) => this.props.createPost(e, this.state)}>
+                    <div>
+                        <h4>Title:</h4>
+                        <input
+                            type='text'
+                            name='title'
+                            required
+                            value={this.state.title}
+                            onChange={this.handleChange}
+                            className='createPostFormInput'
+                        />  
+                    </div>
+                    <div>
+                        <h4>Image URL:</h4>
+                        <input
+                            type='text'
+                            name='img'
+                            value={this.state.img}
+                            onChange={this.handleChange}
+                            className='createPostFormInput'
+                        />
+                    </div>
+                    <div>
+                        <h4>Post Content:</h4>
+                        <textarea
+                            type='text'
+                            name='body'
+                            required
+                            value={this.state.body}
+                            onChange={this.handleChange}
+                            className='createPostFormInput'
+                        />  
+                    </div>
+                    
+                    <input type='submit' value='Post It!' className='createPostFormSubmit'/>
+                </form>
+                {this.state.img && 
+                    <div className='createPostFormPreviewWrapper'>   
+                        <p>Image preview</p>
+                        <img src={this.state.img} alt='preview' className='createPostFormPreviewImg'/>
+                    </div>
+                }
+            </div>
         )
     }
 }

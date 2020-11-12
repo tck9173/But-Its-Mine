@@ -86,7 +86,7 @@ class App extends Component {
             <Route path = '/planning/budget-tool' component = {BudgetTool} />
             <Route path = '/build' component = {BuildContainer} />
             <Route path = '/forum' render={() => (
-              <ForumContainer currentUser={this.state.currentUser.id}/>
+              <ForumContainer currentUser={this.state.currentUser}/>
             )} />
           </Switch>
           
