@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL : 'https://sleepy-brushlands-19849.herokuapp.com/'
+    //baseURL : 'https://sleepy-brushlands-19849.herokuapp.com'
+    baseURL : 'http://localhost:3001'
 })
 
 export const registerUser = async (registerData) =>{
