@@ -9,12 +9,19 @@ class PostItem extends Component {
 
         this.state = {
             currentPost : props.posts.find(post => post.id === parseInt(props.postId)),
-            comments : props.comments.filter(comment => comment.postId === parseInt(props.postId))
+            comments : props.comments.filter(comment => comment.postId === parseInt(props.postId)),
+            
         }
     }
 
     handleClick = (e, postId, likes) => {
         this.props.updatePostLike(e, this.props.postId, this.state.currentPost.likes + 1)
+        this.refs.btn.setAttribute("disabled", "disabled")
+        let updatedPost = this.state.currentPost
+        updatedPost.likes = likes
+        this.setState({
+            currentPost : updatedPost
+        })
     }
 
     render() {
@@ -37,7 +44,7 @@ class PostItem extends Component {
                     </div>
                     <h3>Posted by: {this.state.currentPost.User.username}</h3>
                     <img src={this.state.currentPost.img} alt={this.state.currentPost.title} className='postItemImg'/>
-                    <p>Likes: {this.state.currentPost.likes} <button onClick={(e) => this.handleClick(e, this.props.postId, this.state.currentPost.likes + 1)}>Like this!</button></p>
+                    <p>Likes: {this.state.currentPost.likes} <button ref='btn' onClick={(e) => this.handleClick(e, this.props.postId, this.state.currentPost.likes + 1)}>Like this!</button></p>
                     <p>{this.state.currentPost.body}</p>                
                     <h4>Join the conversation!</h4>
                     <CreateCommentForm 
