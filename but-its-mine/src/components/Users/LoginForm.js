@@ -26,6 +26,8 @@ class LoginForm extends Component {
                 <input
                     type = 'text'
                     name='username'
+                    required
+                    maxlength='25'
                     value={this.state.username}
                     placeholder= 'Username'
                     onChange={this.handleChange}
@@ -34,6 +36,7 @@ class LoginForm extends Component {
                     type = 'password'
                     name='password'
                     placeholder='Password'
+                    maxlength='25'
                     value={this.state.password}
                     onChange={this.handleChange}
                 />

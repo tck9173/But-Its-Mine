@@ -27,6 +27,7 @@ class CreatePostForm extends Component {
                             type='text'
                             name='title'
                             required
+                            maxlength='255'
                             value={this.state.title}
                             onChange={this.handleChange}
                             className='createPostFormInput'
@@ -37,6 +38,7 @@ class CreatePostForm extends Component {
                         <input
                             type='text'
                             name='img'
+                            maxlength='255'
                             value={this.state.img}
                             onChange={this.handleChange}
                             className='createPostFormInput'
@@ -48,6 +50,7 @@ class CreatePostForm extends Component {
                             type='text'
                             name='body'
                             required
+                            maxlength='2000'
                             value={this.state.body}
                             onChange={this.handleChange}
                             className='createPostFormInput'

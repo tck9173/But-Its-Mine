@@ -24,6 +24,7 @@ class CreateCommentForm extends Component {
                     name='body'
                     value={this.state.body}
                     required
+                    maxlength='255'
                     onChange={this.handleChange}
                 />
                 <input type='submit' value='Comment!' />
