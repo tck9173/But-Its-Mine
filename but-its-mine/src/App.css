@@ -114,29 +114,48 @@ a:hover {
   margin-left: 20px;
 }
 
-.createPostFormInput {
+.postFormInput {
   width:394px;
   margin: 0;
 }
 
-.createPostForm textarea {
+.postForm textarea {
   width: 394px;
   height: 150px;
 }
 
-.createPostFormSubmit {
-  width: 50px;
+.postFormSubmit {
+  width: 100px;
 }
 
-.createPostFormWrapper {
+.postFormWrapper {
   display: flex;
   flex-flow: row;
 }
 
-.createPostFormPreviewWrapper {
+.postFormPreviewWrapper {
   margin:0 20px 0 20px;
 }
 
-.createPostFormPreviewImg {
+.postFormPreviewImg {
   max-height: 340px;
+}
+
+.commentInput {
+  width: 394px;
+  height: 50px;
+}
+
+.commentContainer {
+  border: solid #fbd46d 1px;
+  padding: 5px;
+}
+
+.commentUsername {
+  margin: 0;
+  font-size: 14px;
+}
+
+.commentBody {
+  margin: 0;
 }

@@ -42,9 +42,15 @@ class ForumContainer extends Component {
 
     createComment = async (e,commentData) => {
         e.preventDefault();
-        const newComment = await postComment(commentData);
+        console.log(commentData)
+        let newComment = await postComment(commentData);
+        console.log(newComment)
+        newComment.User = {};
+        newComment.User.username = commentData.User.username;
+        console.log(newComment)
         const comments = this.state.comments;
         const newComments = [... comments, newComment];
+        console.log(newComments)
         this.setState({
             comments: newComments
         })
@@ -52,6 +58,8 @@ class ForumContainer extends Component {
 
     updatePost = async (e,id, postData) => {
         e.preventDefault();
+        console.log(postData)
+        
         const updatedPost = await putPost(id, postData);
         const posts = this.state.posts;
         const newPosts = posts.map(post => post.id === parseInt(id) ? updatedPost : post)
@@ -59,6 +67,21 @@ class ForumContainer extends Component {
             posts: newPosts
         })
         this.props.history.push('/forum/posts');
+    }
+
+    updatePostLike = async (e, id, postData) => {
+        e.preventDefault();
+        let postObject = 
+            { 
+                likes: postData
+            }
+        console.log(postObject)
+        const updatedPost = await putPost(id, postObject);
+        const posts = this.state.posts;
+        const newPosts = posts.map(post => post.id === parseInt(id) ? updatedPost : post)
+        this.setState({
+            posts: newPosts
+        })
     }
 
     deletePost = async (id) => {
@@ -93,6 +116,7 @@ class ForumContainer extends Component {
                         deletePost={this.deletePost}
                         currentUser={this.props.currentUser}
                         createComment = {this.createComment}
+                        updatePostLike={this.updatePostLike}
                     />
                 )} />
                 <Route path = '/forum/posts/:id/edit' render ={(props) => (

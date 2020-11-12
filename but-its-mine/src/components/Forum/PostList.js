@@ -12,8 +12,11 @@ const PostList = (props) => {
                             <div className='postListImgContainer' >
                                 <img className="postListImg" src={post.img} alt={post.title}/>      
                             </div>
+                            <div>
+                                <h3>{post.title}</h3> 
+                                <p>Likes: {post.likes}</p>    
+                            </div>
                             
-                            <h3>{post.title}</h3> 
                         </div>
                         
                     </Link>

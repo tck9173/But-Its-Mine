@@ -19,8 +19,8 @@ class CreatePostForm extends Component {
 
     render() {
         return(
-            <div className='createPostFormWrapper'>
-                <form className = 'createPostForm' onSubmit={(e) => this.props.createPost(e, this.state)}>
+            <div className='postFormWrapper'>
+                <form className = 'postForm' onSubmit={(e) => this.props.createPost(e, this.state)}>
                     <div>
                         <h4>Title:</h4>
                         <input
@@ -30,7 +30,7 @@ class CreatePostForm extends Component {
                             maxlength='255'
                             value={this.state.title}
                             onChange={this.handleChange}
-                            className='createPostFormInput'
+                            className='postFormInput'
                         />  
                     </div>
                     <div>
@@ -41,7 +41,7 @@ class CreatePostForm extends Component {
                             maxlength='255'
                             value={this.state.img}
                             onChange={this.handleChange}
-                            className='createPostFormInput'
+                            className='postFormInput'
                         />
                     </div>
                     <div>
@@ -53,14 +53,14 @@ class CreatePostForm extends Component {
                             maxlength='2000'
                             value={this.state.body}
                             onChange={this.handleChange}
-                            className='createPostFormInput'
+                            className='postFormInput'
                         />  
                     </div>
                     
-                    <input type='submit' value='Post It!' className='createPostFormSubmit'/>
+                    <input type='submit' value='Post It!' className='postFormSubmit'/>
                 </form>
                 {this.state.img && 
-                    <div className='createPostFormPreviewWrapper'>   
+                    <div className='postFormPreviewWrapper'>   
                         <p>Image preview</p>
                         <img src={this.state.img} alt='preview' className='createPostFormPreviewImg'/>
                     </div>

@@ -5,8 +5,9 @@ const CommentList = (props) => {
         <div>
             {props.comments && props.comments.map((comment, index) => {
                 return (
-                    <div key={index}>
-                        <p>{comment.body}</p>
+                    <div className='commentContainer' key={index}>
+                        <p className='commentUsername'>By: {comment.User.username}</p>
+                        <p className='commentBody'>{comment.body}</p>
                     </div>
                 )
             })}
