@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import SearchForm from './SearchForm';
-
+let renderNum = 1;
 class PostList extends Component {
     constructor(props){
         super(props);
@@ -15,11 +15,11 @@ class PostList extends Component {
 
     sortLists= () => {
         const sortedPosts = this.props.posts.sort((a, b) => (a.likes < b.likes) ? 1 : -1)
-        this.setState({sortedPosts})
-    }
+        this.setState({sortedPosts})  
+    } 
 
     componentDidMount() {
-        this.sortLists()
+        this.sortLists();
     }
 
     handleChange = (e) => {
@@ -28,17 +28,20 @@ class PostList extends Component {
     }
 
     render() {
+        console.log(this.props)
+        console.log(renderNum)
+        renderNum++
         return (
             <div>
                 <Link to='/forum/posts/new'><button>Add a new post</button></Link>
                 <SearchForm handleChange = {this.handleChange}/>
                 {this.state.sortedPosts && this.state.sortedPosts.map((post, index) => {
                     return(
-                        <div>
+                        <div key={index}>
                             {this.state.search ?
                                 <div>
                                     {post[this.state.searchTopic].toLowerCase().includes(this.state.search.toLowerCase()) ?
-                                        <Link to={`/forum/posts/${post.id}`} key={index}>
+                                        <Link to={`/forum/posts/${post.id}`} >
                                             <div className='postListItem'>
                                                 <div className='postListImgContainer' >
                                                     <img className="postListImg" src={post.img} alt={post.title}/>      

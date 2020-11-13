@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Route, withRouter} from 'react-router-dom';
+import {Route, withRouter, Link} from 'react-router-dom';
 
 import { indexPosts, indexComments, postPost, postComment, putPost, destroyPost} from '../../services/api_helper';
 
@@ -102,6 +102,7 @@ class ForumContainer extends Component {
     render() {
         return (
             <div className='main'>
+                <Link to='/forum/posts'><button>See all posts</button></Link>
                 <Route exact path='/forum/posts' render={() => (
                     <PostList posts={this.state.posts} comments={this.state.comments}/>
                 )} />

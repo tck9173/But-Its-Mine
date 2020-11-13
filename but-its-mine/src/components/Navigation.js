@@ -26,7 +26,7 @@ function Navigation(props) {
                 className = {props.activePage === "build" ? "active" : null}
             >Build</Link>
             <Link 
-                to = '/forum/posts' 
+                to = '/forum' 
                 onClick = {()=>props.setActivePage('forum')}
                 className = {props.activePage === 'forum' ? "active" : null}
             >Forum</Link>
