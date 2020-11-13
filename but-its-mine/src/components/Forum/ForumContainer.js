@@ -50,6 +50,7 @@ class ForumContainer extends Component {
         this.setState({
             comments: newComments
         })
+        this.props.history.push(`/forum/posts/${newComment.postId}`)
     }
 
     updatePost = async (e,id, postData) => {

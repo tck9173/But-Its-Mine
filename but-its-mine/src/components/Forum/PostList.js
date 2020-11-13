@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import SearchForm from './SearchForm';
-let renderNum = 1;
 class PostList extends Component {
     constructor(props){
         super(props);
@@ -28,9 +27,6 @@ class PostList extends Component {
     }
 
     render() {
-        console.log(this.props)
-        console.log(renderNum)
-        renderNum++
         return (
             <div>
                 <Link to='/forum/posts/new'><button>Add a new post</button></Link>

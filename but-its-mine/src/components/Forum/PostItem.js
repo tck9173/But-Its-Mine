@@ -8,8 +8,7 @@ class PostItem extends Component {
         super(props);
 
         this.state = {
-            currentPost : null,
-            comments : null
+            currentPost : null
         }
     }
 
@@ -23,20 +22,19 @@ class PostItem extends Component {
         })
     }
 
-    updateComments = () => {
+    updatePost = () => {
         const currentPost = this.props.posts.find(post => post.id === parseInt(this.props.postId))
-        const comments = this.props.comments.filter(comment => comment.postId === parseInt(this.props.postId))
         this.setState({
             currentPost,
-            comments
         })
     }
 
     componentDidMount () {
-        this.updateComments();
+        this.updatePost();
     }
 
-    render() {        
+    render() {   
+          
         return (
             <div>
                 <Link 
@@ -66,7 +64,10 @@ class PostItem extends Component {
                         username={this.props.currentUser.username}
                     />
                     <h4>Comments: </h4>
-                    <CommentList comments={this.state.comments}/>
+                    <CommentList 
+                        comments={this.props.comments}
+                        postId={this.props.postId}
+                    />
                     </>
                 )}
             </div>
