@@ -27,7 +27,7 @@ class CreatePostForm extends Component {
                             type='text'
                             name='title'
                             required
-                            maxlength='255'
+                            maxLength='255'
                             value={this.state.title}
                             onChange={this.handleChange}
                             className='postFormInput'
@@ -38,7 +38,7 @@ class CreatePostForm extends Component {
                         <input
                             type='text'
                             name='img'
-                            maxlength='255'
+                            maxLength='255'
                             value={this.state.img}
                             onChange={this.handleChange}
                             className='postFormInput'
@@ -50,7 +50,7 @@ class CreatePostForm extends Component {
                             type='text'
                             name='body'
                             required
-                            maxlength='2000'
+                            maxLength='2000'
                             value={this.state.body}
                             onChange={this.handleChange}
                             className='postFormInput'
@@ -62,7 +62,7 @@ class CreatePostForm extends Component {
                 {this.state.img && 
                     <div className='postFormPreviewWrapper'>   
                         <p>Image preview</p>
-                        <img src={this.state.img} alt='preview' className='createPostFormPreviewImg'/>
+                        <img src={this.state.img} alt='preview' className='postFormPreviewImg'/>
                     </div>
                 }
             </div>

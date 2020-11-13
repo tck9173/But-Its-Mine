@@ -49,7 +49,7 @@ class UpdatePostForm extends Component {
                         <input
                             type='text'
                             name='img'
-                            maxlength='255'
+                            maxLength='255'
                             value={this.state.img}
                             onChange={this.handleChange}
                             className = 'postFormInput'
@@ -61,7 +61,7 @@ class UpdatePostForm extends Component {
                                 type='text'
                                 name='body'
                                 required
-                                maxlength='2000'
+                                maxLength='2000'
                                 value={this.state.body}
                                 onChange={this.handleChange}
                                 className = 'postFormInput'
@@ -73,13 +73,10 @@ class UpdatePostForm extends Component {
                     {this.state.img && 
                         <div className='postFormPreviewWrapper'>   
                             <p>Image preview</p>
-                            <img src={this.state.img} alt='preview'/>
+                            <img src={this.state.img} alt='preview' className='postFormPreviewImg'/>
                         </div>
                     }
                 </div>
-                <Link 
-                    to = '/forum/posts' 
-                ><button>Back to all posts</button></Link>
             </div>
         )
     }

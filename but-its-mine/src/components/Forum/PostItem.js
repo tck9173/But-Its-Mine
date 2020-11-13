@@ -37,9 +37,6 @@ class PostItem extends Component {
           
         return (
             <div>
-                <Link 
-                    to = '/forum/posts' 
-                ><button>Back to all posts</button></Link>
                 {this.state.currentPost && (
                     <>
                     <div className='postItemHeader'>
@@ -53,7 +50,7 @@ class PostItem extends Component {
                         }
                     </div>
                     <h3>Posted by: {this.state.currentPost.User.username}</h3>
-                    <img src={this.state.currentPost.img} alt={this.state.currentPost.title} className='postItemImg'/>
+                    {this.state.currentPost.img.length > 0 && <img src={this.state.currentPost.img} alt={this.state.currentPost.title} className='postItemImg'/> }
                     <p>Likes: {this.state.currentPost.likes} <button ref='btn' onClick={(e) => this.handleClick(e, this.props.postId, this.state.currentPost.likes + 1)}>Like this!</button></p>
                     <p>{this.state.currentPost.body}</p>                
                     <h4>Join the conversation!</h4>

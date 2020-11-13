@@ -40,7 +40,7 @@ class PostList extends Component {
                                         <Link to={`/forum/posts/${post.id}`} >
                                             <div className='postListItem'>
                                                 <div className='postListImgContainer' >
-                                                    <img className="postListImg" src={post.img} alt={post.title}/>      
+                                                    {post.img.length > 0 && <img className="postListImg" src={post.img} alt={post.title}/>}      
                                                 </div>
                                                 <div>
                                                     <h3>{post.title}</h3> 
@@ -56,7 +56,7 @@ class PostList extends Component {
                                 <Link to={`/forum/posts/${post.id}`} key={index}>
                                     <div className='postListItem'>
                                         <div className='postListImgContainer' >
-                                            <img className="postListImg" src={post.img} alt={post.title}/>      
+                                            {post.img.length > 0 && <img className="postListImg" src={post.img} alt={post.title}/>}      
                                         </div>
                                         <div>
                                             <h3>{post.title}</h3> 

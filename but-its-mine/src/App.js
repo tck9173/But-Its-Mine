@@ -22,7 +22,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      activePage: '',
+      activePage: 'homepage',
       currentUser: {
         name:""
       }
@@ -32,21 +32,29 @@ class App extends Component {
   handleRegister = async (e, registerData) => {
     e.preventDefault();
     const currentUser = await registerUser(registerData);
-    this.setState({currentUser})
-    this.props.history.push('/forum/posts');
+    this.setState({
+      currentUser,
+      activePage: 'forum'
+    })
+    this.props.history.push('/forum');
   }
 
   handleLogin = async (e, loginData) => {
     e.preventDefault();
     const currentUser = await loginUser(loginData);
-    console.log(currentUser)
-    this.setState({currentUser})
-    this.props.history.push('/forum/posts');
+    this.setState({
+      currentUser,
+      activePage: 'forum'
+    })
+    this.props.history.push('/forum');
   }
 
   handleLogout = () => {
     localStorage.removeItem('authToken');
-    this.setState({currentUser : {name:null}})
+    this.setState({
+      currentUser : {name:null},
+      activePage: 'homepage'
+    })
     this.props.history.push('/')
   }
 

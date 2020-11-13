@@ -8,6 +8,7 @@ import CreatePostForm from './CreatePostForm';
 import PostList from './PostList';
 import PostItem from './PostItem';
 import UpdatePostForm from './UpdatePostForm';
+import ForumHome from './ForumHome';
 
 class ForumContainer extends Component {
     constructor(props){
@@ -96,38 +97,37 @@ class ForumContainer extends Component {
         this.readAllComments();
     }
 
-    // componentWillUnmount = () => {
-    //     this.props.history.push('/');
-    // }
-
     render() {
         return (
             <div className='main'>
                 <Link to='/forum/posts'><button>See all posts</button></Link>
-                <Route exact path='/forum/posts' render={() => (
-                    <PostList posts={this.state.posts} comments={this.state.comments}/>
-                )} />
-                <Route path='/forum/posts/new' render={() => (
-                    <CreatePostForm createPost={this.createPost} currentUser={this.props.currentUser}/>
-                )} />
-                <Route exact path='/forum/posts/:id' render={(props) => (
-                    <PostItem
-                        posts={this.state.posts}
-                        comments={this.state.comments}
-                        postId={props.match.params.id}
-                        deletePost={this.deletePost}
-                        currentUser={this.props.currentUser}
-                        createComment = {this.createComment}
-                        updatePostLike={this.updatePostLike}
-                    />
-                )} />
-                <Route path = '/forum/posts/:id/edit' render ={(props) => (
-                    <UpdatePostForm
-                        posts={this.state.posts}
-                        updatePost={this.updatePost}
-                        postId={props.match.params.id}
-                    />
-                )} />
+                <Switch>
+                    <Route path = '/forum' component={ForumHome} />
+                    <Route exact path='/forum/posts' render={() => (
+                        <PostList posts={this.state.posts} comments={this.state.comments}/>
+                    )} />
+                    <Route exact path='/forum/posts/new' render={() => (
+                        <CreatePostForm createPost={this.createPost} currentUser={this.props.currentUser}/>
+                    )} />
+                    <Route exact path='/forum/posts/:id' render={(props) => (
+                        <PostItem
+                            posts={this.state.posts}
+                            comments={this.state.comments}
+                            postId={props.match.params.id}
+                            deletePost={this.deletePost}
+                            currentUser={this.props.currentUser}
+                            createComment = {this.createComment}
+                            updatePostLike={this.updatePostLike}
+                        />
+                    )} />
+                    <Route path = '/forum/posts/:id/edit' render ={(props) => (
+                        <UpdatePostForm
+                            posts={this.state.posts}
+                            updatePost={this.updatePost}
+                            postId={props.match.params.id}
+                        />
+                    )} />
+                </Switch>
             </div>
         )    
     }
