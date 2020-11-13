@@ -42,15 +42,11 @@ class ForumContainer extends Component {
 
     createComment = async (e,commentData) => {
         e.preventDefault();
-        console.log(commentData)
         let newComment = await postComment(commentData);
-        console.log(newComment)
         newComment.User = {};
         newComment.User.username = commentData.User.username;
-        console.log(newComment)
         const comments = this.state.comments;
         const newComments = [... comments, newComment];
-        console.log(newComments)
         this.setState({
             comments: newComments
         })
@@ -98,6 +94,10 @@ class ForumContainer extends Component {
         this.readAllPosts();
         this.readAllComments();
     }
+
+    // componentWillUnmount = () => {
+    //     this.props.history.push('/');
+    // }
 
     render() {
         return (

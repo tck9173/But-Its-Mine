@@ -8,9 +8,8 @@ class PostItem extends Component {
         super(props);
 
         this.state = {
-            currentPost : props.posts.find(post => post.id === parseInt(props.postId)),
-            comments : props.comments.filter(comment => comment.postId === parseInt(props.postId)),
-            
+            currentPost : null,
+            comments : null
         }
     }
 
@@ -24,7 +23,20 @@ class PostItem extends Component {
         })
     }
 
-    render() {
+    updateComments = () => {
+        const currentPost = this.props.posts.find(post => post.id === parseInt(this.props.postId))
+        const comments = this.props.comments.filter(comment => comment.postId === parseInt(this.props.postId))
+        this.setState({
+            currentPost,
+            comments
+        })
+    }
+
+    componentDidMount () {
+        this.updateComments();
+    }
+
+    render() {        
         return (
             <div>
                 <Link 

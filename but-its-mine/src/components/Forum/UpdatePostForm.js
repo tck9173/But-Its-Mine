@@ -38,7 +38,7 @@ class UpdatePostForm extends Component {
                                 type='text'
                                 name='title'
                                 required
-                                maxlength='255'
+                                maxLength='255'
                                 value={this.state.title}
                                 onChange={this.handleChange}
                                 className = 'postFormInput'
