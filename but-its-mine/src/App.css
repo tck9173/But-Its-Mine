@@ -9,7 +9,17 @@ html {
   color: #eeeeee
 }
 
+button {
+  background-color: white;
+  border-radius: 5px;
+  height: 20px;
+}
 
+button:hover {
+  background-color: #fbd46d;
+  border-radius: 5px;
+  height: 20px;
+}
 
 .header {
   display: flex;
