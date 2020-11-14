@@ -8,7 +8,7 @@ import Navigation from './components/Navigation';
 import PlanningContainer from './components/Planning/PlanningContainer';
 import StartContainer from './components/Start/StartContainer';
 import ForumContainer from './components/Forum/ForumContainer';
-import Homepage from './components/Homepage';
+import HomepageContainer from './components/Homepage/HomepageContainer';
 import BudgetTool from './components/Planning/BudgetTool';
 import BuildContainer from './components/Build/BuildContainer';
 
@@ -88,7 +88,7 @@ class App extends Component {
             <Route path = '/register' render={() => (
               <RegisterForm handleRegister={this.handleRegister} />
             )} />
-            <Route exact path = '/' component = {Homepage} />
+            <Route exact path = '/' component = {HomepageContainer} />
             <Route path = '/start' component = {StartContainer} />
             <Route exact path = '/planning' component = {PlanningContainer} />
             <Route path = '/planning/budget-tool' component = {BudgetTool} />
