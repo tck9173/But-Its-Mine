@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class BudgetTool extends Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class BudgetTool extends Component {
     render() {
         return(
             <div>
+                <Link to = '/planning'><button>Go back to planning</button></Link>
                 <h2>Budget Tool</h2>
                 <form onSubmit={(e) => this.updateRemainder(e)}>
                     <span>Enter your budget:</span>
