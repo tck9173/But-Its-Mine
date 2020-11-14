@@ -193,3 +193,14 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
 }
+
+.budgetInputContainer {
+  width: 550px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.budgetInputContainer p {
+  margin:0;
+}
