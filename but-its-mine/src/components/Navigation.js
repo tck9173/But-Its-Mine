@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 function Navigation(props) {
     return (
         <div className = 'nav'>
-            <h3>Navigation</h3>
             <Link 
                 to = '/' 
                 onClick = {()=>props.setActivePage('homepage')}
@@ -14,7 +13,7 @@ function Navigation(props) {
                 to = '/start' 
                 onClick = {()=>props.setActivePage('start')}
                 className = {props.activePage === 'start' ? "active" : null}
-            >Before you start</Link>
+            >Before You Start</Link>
             <Link 
                 to = '/planning' 
                 onClick = {()=>props.setActivePage('planning')}
