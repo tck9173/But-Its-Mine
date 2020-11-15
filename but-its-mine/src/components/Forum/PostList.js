@@ -44,7 +44,6 @@ class PostList extends Component {
                                                 </div>
                                                 <div>
                                                     <h3>{post.title}</h3> 
-                                                    <h4>Posted by: {post.User.username}</h4>
                                                     <p>Likes: {post.likes}</p>    
                                                 </div>
                                             </div>
@@ -61,7 +60,6 @@ class PostList extends Component {
                                         </div>
                                         <div>
                                             <h3>{post.title}</h3> 
-                                            <h4>Posted by: {post.User.username}</h4>
                                             <p>Likes: {post.likes}</p>    
                                         </div>                                        
                                     </div>
