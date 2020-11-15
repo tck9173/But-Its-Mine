@@ -80,7 +80,7 @@ class App extends Component {
       <div className="App">
         <Header currentUser={this.state.currentUser.name} handleLogout={this.handleLogout}/>
         <div className = "contentContainer">
-          <Navigation setActivePage={this.setActivePage} activePage={this.state.activePage}/>
+          <Navigation setActivePage={this.setActivePage} activePage={this.state.activePage} currentUser = {this.state.currentUser}/>
           <Switch>
             <Route path = '/login' render={() => (
               <LoginForm handleLogin={this.handleLogin} />
