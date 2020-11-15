@@ -73,7 +73,6 @@ class ForumContainer extends Component {
             { 
                 likes: postData
             }
-        console.log(postObject)
         const updatedPost = await putPost(id, postObject);
         const posts = this.state.posts;
         const newPosts = posts.map(post => post.id === parseInt(id) ? updatedPost : post)
