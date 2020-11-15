@@ -8,7 +8,10 @@ function Header(props) {
             {props.currentUser ?
                 <div className='userWelcome'>
                     <p>Welcome, {props.currentUser}</p>
-                    <button onClick={props.handleLogout}>Logout</button>
+                    <div>
+                        <Link to='/profile'><button>Profile</button></Link>
+                        <button onClick={props.handleLogout}>Logout</button>
+                    </div>
                 </div>
             :
                 <Link to='/login'><button>Login/Register</button></Link>

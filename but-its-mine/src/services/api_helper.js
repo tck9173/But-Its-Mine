@@ -12,6 +12,12 @@ export const registerUser = async (registerData) =>{
     return resp.data.user;
 }
 
+export const updateUser = async (editData) =>{
+    const resp = await api.put('/user/profile', editData);
+    console.log(resp.data.user);
+    return resp.data.user;
+}
+
 export const loginUser = async (loginData) =>{
     const resp = await api.post('/auth/login', loginData);
     localStorage.setItem('authToken', resp.data.token);

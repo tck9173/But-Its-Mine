@@ -15,7 +15,10 @@ import BuildContainer from './components/Build/BuildContainer';
 import RegisterForm from './components/Users/RegisterForm';
 import LoginForm from './components/Users/LoginForm';
 
-import { registerUser, loginUser, verifyUser } from './services/api_helper';
+import Profile from './components/Users/Profile';
+import ProfileEdit from './components/Users/ProfileEdit';
+
+import { registerUser, loginUser, verifyUser, updateUser } from './services/api_helper';
 
 class App extends Component {
   constructor(props) {
@@ -65,6 +68,21 @@ class App extends Component {
     }
   }
 
+  handleProfileEdit = async (e, editData) => {
+    e.preventDefault();
+    const currentUser = await updateUser(editData);
+    this.setState(prevState => ({
+      currentUser: {
+        ...prevState.currentUser,
+        name: currentUser.name,
+        username: currentUser.username
+      },
+      activePage: 'forum'
+    }))
+    this.props.history.push('/');
+    alert('Changes saved');
+  }
+
   setActivePage = (activePage) => {
     this.setState({
         activePage
@@ -87,6 +105,12 @@ class App extends Component {
             )} />
             <Route path = '/register' render={() => (
               <RegisterForm handleRegister={this.handleRegister} />
+            )} />
+            <Route exact path = '/profile' render={() => (
+              <Profile currentUser={this.state.currentUser}/>
+            )} />
+            <Route path = '/profile/edit' render={() => (
+              <ProfileEdit currentUser={this.state.currentUser} handleProfileEdit={this.handleProfileEdit}/>
             )} />
             <Route exact path = '/' component = {HomepageContainer} />
             <Route path = '/start' component = {StartContainer} />
