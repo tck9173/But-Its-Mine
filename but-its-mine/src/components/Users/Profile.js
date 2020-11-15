@@ -21,6 +21,7 @@ class Profile extends Component {
     render() {
         return (
             <div className='main'>
+                <Link to='/forum'><button>Back to the Forum</button></Link>
                 <form>
                     <p>Your profile</p>
                     <div className='userInputContainer'>

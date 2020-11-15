@@ -30,6 +30,7 @@ class ProfileEdit extends Component {
         return (
             <div className='main'>
                 <Link to='/profile'><button>Back to Profile Page</button></Link>
+                <Link to='/forum'><button>Back to the Forum</button></Link>
                 <form onSubmit={(e)=> this.props.handleProfileEdit(e, this.state)}>
                     <p>Your profile</p>
                     <div className='userInputContainer'>
