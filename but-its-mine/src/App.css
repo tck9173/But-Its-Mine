@@ -9,6 +9,18 @@ html {
   color: #eeeeee
 }
 
+input[type=submit] {
+  background-color: white;
+  border-radius: 5px;
+  height: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #fbd46d;
+  border-radius: 5px;
+  height: 20px;
+}
+
 button {
   background-color: white;
   border-radius: 5px;
