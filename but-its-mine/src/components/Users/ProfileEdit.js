@@ -7,8 +7,7 @@ class ProfileEdit extends Component {
 
         this.state = {
             name: '',
-            username: '',
-            password: ''
+            username: ''
         }
     }
 

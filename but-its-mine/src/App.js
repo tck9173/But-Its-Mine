@@ -79,7 +79,7 @@ class App extends Component {
       },
       activePage: 'forum'
     }))
-    this.props.history.push('/');
+    this.props.history.push('/profile');
     alert('Changes saved');
   }
 

@@ -14,7 +14,6 @@ export const registerUser = async (registerData) =>{
 
 export const updateUser = async (editData) =>{
     const resp = await api.put('/user/profile', editData);
-    console.log(resp.data.user);
     return resp.data.user;
 }
 
