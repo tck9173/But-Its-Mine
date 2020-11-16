@@ -29,6 +29,7 @@ class ProfileEdit extends Component {
     render() {
         return (
             <div className='main'>
+                <h2>Edit Your Profile</h2>
                 <Link to='/profile'><button>Back to Profile Page</button></Link>
                 <Link to='/forum'><button>Back to the Forum</button></Link>
                 <form onSubmit={(e)=> this.props.handleProfileEdit(e, this.state)}>
@@ -38,6 +39,7 @@ class ProfileEdit extends Component {
                         <input
                             type = 'text'
                             name='name'
+                            required
                             value={this.state.name}
                             onChange={this.handleChange}
                         />
@@ -47,6 +49,7 @@ class ProfileEdit extends Component {
                         <input
                             type = 'text'
                             name='username'
+                            required
                             value={this.state.username}
                             onChange={this.handleChange}
                         />

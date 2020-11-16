@@ -23,13 +23,14 @@ class RegisterForm extends Component {
         return (
             <div className='main'>
                 <form onSubmit={(e)=> this.props.handleRegister(e, this.state)}>
-                    <p>Register to join the conversation</p>
+                    <h2>Register to join the conversation</h2>
                     <div className='userInputContainer'>
                         <p>Name:</p>
                         <input
                             type = 'text'
                             name='name'
                             value={this.state.name}
+                            required
                             placeholder='Name'
                             onChange={this.handleChange}
                         />
@@ -40,6 +41,7 @@ class RegisterForm extends Component {
                             type = 'text'
                             name='username'
                             placeholder='Username'
+                            required
                             value={this.state.username}
                             onChange={this.handleChange}
                         />
@@ -49,6 +51,7 @@ class RegisterForm extends Component {
                         <input
                             type = 'password'
                             name='password'
+                            required
                             value={this.state.password}
                             onChange={this.handleChange}
                         />

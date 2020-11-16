@@ -99,6 +99,7 @@ class ForumContainer extends Component {
     render() {
         return (
             <div className='main'>
+                <h2>Forum</h2>
                 <Link to='/forum/posts'><button>See all posts</button></Link>
                 <Switch>
                     <Route exact path = '/forum' component={ForumHome} />

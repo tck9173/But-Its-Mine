@@ -48,12 +48,12 @@ class BudgetTool extends Component {
     render() {
         return(
             <div className='main'>
-                <Link to = '/planning'><button>Go back to planning</button></Link>
                 <h2>Budget Tool</h2>
+                <Link to = '/planning'><button>Go back to planning</button></Link>
                 <form onSubmit={(e) => this.updateBudget(e)}>
                     <div className='budgetInputContainer'>
                         <p>Enter your budget:</p>
-                        <input type = 'number' name='budget' onChange={this.onChange}/>
+                        <input type = 'number' required name='budget' onChange={this.onChange}/>
                     </div>
                     <input type = "submit" value='Show recommendations'/>
                     <h4>Recommended breakdown shown next to component</h4>

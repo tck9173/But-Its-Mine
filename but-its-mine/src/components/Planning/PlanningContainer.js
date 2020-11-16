@@ -28,7 +28,22 @@ function PlanningContainer() {
             <h3>Example Builds</h3>
             <p>Section coming soon!</p>            
             <h3>Plan for periherals</h3>
-            <p>Section coming soon!</p>
+            <p>Something a lot of new PC builders forget about, including myslef, is peripherals. These are all the components you need to have a full setup besides your PC. While the peripiherals you will need will vary on personal preferences, there are four components you will absolutely need:</p>
+            <ul>
+                <li>Monitor</li>
+                <li>Mouse</li>
+                <li>Keyboard</li>
+                <li>Audio output</li>
+            </ul>
+            <p>Price for these three main peripherals can be as low as a couple hundred or you can spend over $1000 on the monitor alone. Make sure you buy for what you currently need, plus a little bit more so you can push off upgrading a little further. Audio output depends on your personal preference. If you plan on playing games with friends online you most likely need a mic or headset. If you plan on only playing one player games you can get by with a set of small speakers.</p>
+            <p>Peripherals past these three are completely your choice. There are dozens of types of peripherals and hundreds of choices. Some of the other peripherals include:</p>
+            <ul>
+                <li>Additional monitors</li>
+                <li>Controllers</li>
+                <li>Racing Wheel</li>
+                <li>Virtual Reality Headset</li>
+            </ul>
+            <p>Besides these components make sure you have a nice desk and chair. In addition to peripherals you of course need to plan for your first games! A PC with no games will do you no good. Once you have done all your research, order your parts, and get ready to build!</p>
         </div>
     )
 }

@@ -24,7 +24,7 @@ class LoginForm extends Component {
         return (
             <div className='main'>
                 <form onSubmit={(e)=> this.props.handleLogin(e, this.state)}>
-                    <p>Log in to join the conversation</p>
+                    <h2>Log in to join the conversation</h2>
                     <div className='userInputContainer'>
                         <p>Username:</p>
                         <input
@@ -43,6 +43,7 @@ class LoginForm extends Component {
                             type = 'password'
                             name='password'
                             maxLength='25'
+                            required
                             value={this.state.password}
                             onChange={this.handleChange}
                         />

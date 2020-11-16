@@ -12,9 +12,32 @@ class HomepageContainer extends Component {
         this.state={
             renderComponent : 2,
             minRender: 1,
-            maxRender: 4
+            maxRender: 4,
+            activeHome: ''
         }
     }
+
+    setActiveHome=()=>{
+        let renderComponent = this.state.renderComponent;
+        if (renderComponent === 1) { 
+            this.setState({
+                activeHome: 'Featured Benchmark'
+            })
+        } else if (renderComponent === 2) {
+            this.setState({
+                activeHome: 'Featured Build'
+            })
+        } else if (renderComponent === 3) {
+            this.setState({
+                activeHome: 'Featured News'
+            })
+        } else if (renderComponent === 4) {
+            this.setState({
+                activeHome: 'Featured Game'
+            })
+        }
+    }
+
     changePage=(direction)=> {
         let renderComponent = this.state.renderComponent;
         if( renderComponent === this.state.maxRender && direction === 1) {
@@ -32,6 +55,11 @@ class HomepageContainer extends Component {
                 renderComponent: renderComponent + direction
             })
         }
+        setTimeout(this.setActiveHome,500);
+    }
+
+    componentDidMount() {
+        this.setActiveHome();
     }
 
     render() {
@@ -39,7 +67,7 @@ class HomepageContainer extends Component {
             <div className = 'main'>
                 <div className='homepageButtons'>
                     <button onClick={()=> this.changePage(-1)}>&#10094;</button> 
-                    <p>Select Page</p>
+                    <p className='activeHome'>{this.state.activeHome}</p>
                     <button onClick={()=> this.changePage(1)}>&#10095;</button>
                 </div>
                 
