@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+
+import './User.css';
+
 class RegisterForm extends Component {
     constructor(props){
         super(props);

@@ -1,0 +1,17 @@
+.budgetInputContainer {
+  margin: 10px 0;
+  border-bottom: 1px solid #fbd46d; 
+  width: 400px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.budgetInputContainer p {
+  margin:0;
+}
+
+.budgetInputWrapper {
+  width: 400px;
+  padding: 3px;
+}

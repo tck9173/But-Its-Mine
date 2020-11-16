@@ -1,20 +1,22 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
+import './Planning.css';
+
 class BudgetTool extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            remainder: null,
-            budget: null,
-            cpu: null,
-            motherboard: null,
-            gpu: null,
-            psu: null,
-            memory: null,
-            storage: null,
-            case: null
+            remainder: '',
+            budget: '',
+            cpu: '',
+            motherboard: '',
+            gpu: '',
+            psu: '',
+            memory: '',
+            storage: '',
+            case: ''
         }
     }
 
@@ -59,33 +61,36 @@ class BudgetTool extends Component {
                     <h4>Recommended breakdown shown next to component</h4>
                     <p>The breakdowns shown are only recommended. Feel free to change the budget to better serve your needs. To avoid potential bottlenecking stay as close to these breakdowns as possible.</p>
                     <p>Understand prices can change. Watch for sales and do your best to stay on budget for each item. Going even slightly over on each component can quickly increase the total cost of your build.</p>
-                    <div className='budgetInputContainer'>
-                        <p>CPU - Rec: (25%) {this.state.cpu && <span>Shown: ({parseInt((this.state.cpu/this.state.budget)*100)}%)</span>}</p>
-                        <input type = 'number' name='cpu' value={this.state.cpu} onChange={this.onChange}/>    
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Motherboard - Rec: (12%) {this.state.motherboard && <span>Shown: ({parseInt((this.state.motherboard/this.state.budget)*100)}%)</span>}</p>  
-                        <input type = 'number' name='motherboard' value={this.state.motherboard} onChange={this.onChange}/>    
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Graphics Card - Rec: (35%) {this.state.gpu && <span>Shown: ({parseInt((this.state.gpu/this.state.budget)*100)}%)</span>}</p>                      
-                        <input type = 'number' name='gpu' value={this.state.gpu} onChange={this.onChange}/>                           
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Power Supply - Rec: (7%) {this.state.psu && <span>Shown: ({parseInt((this.state.psu/this.state.budget)*100)}%)</span>}</p>                                                     
-                        <input type = 'number' name='psu' value={this.state.psu} onChange={this.onChange}/>    
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Memory - Rec: (7%) {this.state.memory && <span>Shown: ({parseInt((this.state.memory/this.state.budget)*100)}%)</span>}</p>
-                        <input type = 'number' name='memory' value={this.state.memory} onChange={this.onChange}/>                       
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Storage - Rec: (7%) {this.state.storage && <span>Shown: ({parseInt((this.state.storage/this.state.budget)*100)}%)</span>}</p>
-                        <input type = 'number' name='storage' value={this.state.storage} onChange={this.onChange}/>                         
-                    </div>
-                    <div className='budgetInputContainer'>
-                        <p>Case - Rec: (7%) {this.state.case && <span>Shown: ({parseInt((this.state.case/this.state.budget)*100)}%)</span>}</p> 
-                        <input type = 'number' name='case' value={this.state.case} onChange={this.onChange}/>                       
+                    <p>Component (Recommended/As Shown)</p>
+                    <div className='budgetInputWrapper'>
+                        <div className='budgetInputContainer'>
+                            <p>CPU - (25% / {this.state.cpu && <span>{parseInt((this.state.cpu/this.state.budget)*100)}%)</span>}</p>
+                            <input type = 'number' name='cpu' value={this.state.cpu} onChange={this.onChange}/>    
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Motherboard - (12% /{this.state.motherboard && <span>{parseInt((this.state.motherboard/this.state.budget)*100)}%)</span>}</p>  
+                            <input type = 'number' name='motherboard' value={this.state.motherboard} onChange={this.onChange}/>    
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Graphics Card - (35% / {this.state.gpu && <span>{parseInt((this.state.gpu/this.state.budget)*100)}%)</span>}</p>                      
+                            <input type = 'number' name='gpu' value={this.state.gpu} onChange={this.onChange}/>                           
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Power Supply - (7% /{this.state.psu && <span>{parseInt((this.state.psu/this.state.budget)*100)}%)</span>}</p>                                                     
+                            <input type = 'number' name='psu' value={this.state.psu} onChange={this.onChange}/>    
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Memory - (7% /{this.state.memory && <span>{parseInt((this.state.memory/this.state.budget)*100)}%)</span>}</p>
+                            <input type = 'number' name='memory' value={this.state.memory} onChange={this.onChange}/>                       
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Storage - (7% /{this.state.storage && <span>{parseInt((this.state.storage/this.state.budget)*100)}%)</span>}</p>
+                            <input type = 'number' name='storage' value={this.state.storage} onChange={this.onChange}/>                         
+                        </div>
+                        <div className='budgetInputContainer'>
+                            <p>Case - (7% / {this.state.case && <span>{parseInt((this.state.case/this.state.budget)*100)}%)</span>}</p> 
+                            <input type = 'number' name='case' value={this.state.case} onChange={this.onChange}/>                       
+                        </div>
                     </div>
                 </form>
                 {this.state.budget && <h3>Budget Left: ${this.state.remainder}</h3>}

@@ -3,6 +3,7 @@ import {Route, withRouter, Link, Switch} from 'react-router-dom';
 
 import { indexPosts, indexComments, postPost, postComment, putPost, destroyPost} from '../../services/api_helper';
 
+import './Forum.css';
 
 import CreatePostForm from './CreatePostForm';
 import PostList from './PostList';

@@ -1,0 +1,118 @@
+.commentContainer {
+    border: solid #fbd46d 1px;
+    padding: 5px;
+}
+
+.commentUsername {
+    margin: 0;
+    font-size: 14px;
+}
+
+.commentBody {
+    margin: 0;
+}
+
+.createCommentForm {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+.createCommentForm textarea{
+    margin-right: 10px;
+}
+
+.commentInput {
+    width: 394px;
+    height: 50px;
+  }
+
+  .allPostLink button{
+    margin: 10px 0;
+  }
+
+  .likeContainer {
+    margin: 10px 0;
+  }
+
+  .forumHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+  }
+
+  .forumHeader h2 {
+    padding-right: 20px;
+  }
+
+  .forumListSearchForm {
+    margin: 10px 0;
+  }
+
+  .postFormInput {
+    width:394px;
+    margin: 0;
+  }
+  
+  .postForm textarea {
+    width: 394px;
+    height: 150px;
+  }
+  
+  .postFormSubmit {
+    width: 100px;
+  }
+  
+  .postFormWrapper {
+    display: flex;
+    flex-flow: row;
+  }
+  
+  .postFormPreviewWrapper {
+    margin:0 20px 0 20px;
+  }
+  
+  .postFormPreviewImg {
+    max-height: 340px;
+  }
+
+  .postListImg {
+    max-height: 150px;
+    max-width: 150px;
+    margin: 0 10px;
+  }
+  
+  .postItemHeader {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .postItemImg {
+    max-width: 600px;
+    max-height: 600px;
+  }
+  
+  .createPostForm {
+    display: flex;
+    flex-flow: column;
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+  }
+
+  .postListItem {
+    display: flex;
+    flex-flow: row;
+    border-bottom: solid 2px #fbd46d;
+  }
+  
+  .postListImgContainer {
+    width:170px;
+    height:150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }

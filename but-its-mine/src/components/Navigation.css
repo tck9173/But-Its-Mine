@@ -1,0 +1,13 @@
+.nav {
+    display: flex;
+    flex-flow: column;
+    width: 15vw;
+    max-width: 200px;
+    height: 93vh;
+    border-right: solid #fbd46d 2px;
+    padding: 10px;
+  }
+  
+  .nav a {
+    font-size: 24px;
+  }

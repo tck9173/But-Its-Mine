@@ -4,6 +4,7 @@ import FeaturedGame from './FeaturedGame';
 import FeaturedNews from './FeaturedNews';
 import FeaturedBuild from './FeaturedBuild'
 
+import './Homepage.css';
 
 class HomepageContainer extends Component {
     constructor(props){
