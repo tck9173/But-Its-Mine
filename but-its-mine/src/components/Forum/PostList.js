@@ -44,6 +44,7 @@ class PostList extends Component {
                                                 </div>
                                                 <div>
                                                     <h3>{post.title}</h3> 
+                                                    <p>{`${post.body.substring(0,100)}...`}</p>
                                                     <p>Likes: {post.likes}</p>    
                                                 </div>
                                             </div>
@@ -60,6 +61,7 @@ class PostList extends Component {
                                         </div>
                                         <div>
                                             <h3>{post.title}</h3> 
+                                            <p>{`${post.body.substring(0,100)}...`}</p>
                                             <p>Likes: {post.likes}</p>    
                                         </div>                                        
                                     </div>

@@ -34,7 +34,7 @@ class ForumContainer extends Component {
         e.preventDefault();
         const newPost = await postPost(postData);
         const posts = this.state.posts;
-        const newPosts = [... posts, newPost];
+        const newPosts = [...posts, newPost];
         this.setState({
             posts: newPosts
         })
@@ -47,7 +47,7 @@ class ForumContainer extends Component {
         newComment.User = {};
         newComment.User.username = commentData.User.username;
         const comments = this.state.comments;
-        const newComments = [... comments, newComment];
+        const newComments = [...comments, newComment];
         this.setState({
             comments: newComments
         })
