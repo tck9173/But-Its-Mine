@@ -51,7 +51,7 @@ class PostItem extends Component {
                     </div>
                     <h3>Posted by: {this.state.currentPost.User.username}</h3>
                     {this.state.currentPost.img.length > 0 && <img src={this.state.currentPost.img} alt={this.state.currentPost.title} className='postItemImg'/> }
-                    <p>Likes: {this.state.currentPost.likes} <button ref='btn' onClick={(e) => this.handleClick(e, this.props.postId, this.state.currentPost.likes + 1)}>Like this!</button></p>
+                    <div className='likeContainer'>Likes: {this.state.currentPost.likes} <button ref='btn' onClick={(e) => this.handleClick(e, this.props.postId, this.state.currentPost.likes + 1)}>Like this!</button></div>
                     <p>{this.state.currentPost.body}</p>                
                     <h4>Join the conversation!</h4>
                     <CreateCommentForm 

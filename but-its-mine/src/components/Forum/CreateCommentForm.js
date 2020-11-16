@@ -26,7 +26,7 @@ class CreateCommentForm extends Component {
 
     render() {
         return(
-            <form onSubmit={(e) => this.handleSubmit(e)}>
+            <form onSubmit={(e) => this.handleSubmit(e)} className='createCommentForm'>
                 <textarea
                     type='text'
                     name='body'
