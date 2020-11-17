@@ -14,5 +14,21 @@
   }
 
   .featured img {
-    height: 500px;
+    max-height: 500px;
+  }
+
+  iframe{
+    max-width: 874px;
+    max-height: 500px;
+  }
+
+  @media (max-width: 600px) {
+    .featured img {
+      max-width: 98vw;
+      object-fit: contain;
+    }
+    iframe {
+      width: 98vw;
+      object-fit:contain;
+    }
   }

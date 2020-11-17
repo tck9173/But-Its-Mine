@@ -15,3 +15,12 @@
   width: 400px;
   padding: 3px;
 }
+
+@media (max-width:600px){
+  .budgetInputContainer{
+    width:98vw;
+  }
+  .budgetInputWrapper {
+    width:98vw;
+  }
+}

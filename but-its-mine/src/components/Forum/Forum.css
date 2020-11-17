@@ -116,3 +116,28 @@
     justify-content: center;
     
   }
+
+  @media(max-width:600px){
+    .postListItem {
+      flex-flow: column
+    }
+    .postItemImg{
+      width:98vw;
+    }
+    .createCommentForm {
+      flex-flow: column;
+    }
+    .postFormWrapper {
+      flex-flow: column;
+    }
+    .postFormPreviewImg {
+      width: 98vw;
+      object-fit:contain;
+    }
+    .postFormInput{
+      width: 98vw;
+    }
+    .postForm textarea {
+      width: 98vw;
+    }
+  }
