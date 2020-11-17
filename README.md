@@ -6,6 +6,8 @@
 
 * Want to build a PC but don't know where to begin? This is the site for you! We will walk you through why you should build a PC and how to plan and build your own.
 
+* Be sure to check out the Progressive Web App features. You can download this site as a PWA on desktop and mobile.
+
 ### Before you begin
 
 * Why PC? And why build your own?
