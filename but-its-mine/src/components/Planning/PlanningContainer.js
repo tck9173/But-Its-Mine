@@ -24,7 +24,7 @@ function PlanningContainer() {
             </ul>
             <p>A lot of CPUs come with stock coolers. These usually are not very efficient and can be quite loud, but if you are tight on budget they work just fine. If you want to upgrade, or purchase a CPU without a stock cooler you will need to budget for this cost as well.</p>
             <p>There are a lot of different ways to configure memory and storage, and the larger your budget the more possibilities. On the low end, you should plan to purchase a two stick set of memory and a single SSD for storage. On the high end you can fill every memory slot on your motherboard wiht the highest capacity and fastest memory on the market. You can also load up the drive bay with high capacity SSDs.</p>
-            <p>The most common RAM configuration is two sticks on 3000+ MHz 8GB RAM. This seems to fit well with even the lower budgets. For memory we suggest at a minimum a 250GB SSD for your boot drive and 1TB hard drive for storage.</p>
+            <p>The most common RAM configuration is two sticks of 3000+ MHz 8GB RAM. This seems to fit well with even the lower budgets. For memory we suggest at a minimum a 250GB SSD for your boot drive and 1TB hard drive for storage.</p>
             <h3>Example Builds</h3>
             <p>Section coming soon!</p>            
             <h3>Plan for periherals</h3>

@@ -16,6 +16,13 @@
   padding: 3px;
 }
 
+.overBudget {
+  color: red;
+  background-color: white;
+  width: 200px;
+  border-radius: 5px;
+}
+
 @media (max-width:600px){
   .budgetInputContainer{
     width:98vw;
