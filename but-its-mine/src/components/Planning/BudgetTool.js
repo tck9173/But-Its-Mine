@@ -24,6 +24,7 @@ class BudgetTool extends Component {
         }
     }
 
+    //calculates what is left in budget, if value is negative, sets that in state
     updateRemainder = () => {
         let remainder = this.state.budget - (
             this.state.cpu + 
@@ -47,6 +48,8 @@ class BudgetTool extends Component {
         })
     }
 
+
+    //sets recommended values in budget form
     updateBudget = (e) => {
         e.preventDefault();
         const budget=this.state.budget;

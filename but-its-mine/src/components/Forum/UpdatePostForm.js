@@ -16,6 +16,7 @@ class UpdatePostForm extends Component {
         this.setState({[name]:value});
     }
 
+    //populates form with chosen post
     componentDidMount() {
         const postToEdit = this.props.posts.find(post => post.id === parseInt(this.props.postId));
         this.setState({

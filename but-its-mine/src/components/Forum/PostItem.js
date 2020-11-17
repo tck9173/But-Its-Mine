@@ -12,6 +12,7 @@ class PostItem extends Component {
         }
     }
 
+    //updates like on post and disables like button
     handleClick = (e, postId, likes) => {
         this.props.updatePostLike(e, this.props.postId, this.state.currentPost.likes + 1)
         this.refs.btn.setAttribute("disabled", "disabled")

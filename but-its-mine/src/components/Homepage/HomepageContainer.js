@@ -18,6 +18,7 @@ class HomepageContainer extends Component {
         }
     }
 
+    //sets the homepage navigation display text
     setActiveHome=()=>{
         let renderComponent = this.state.renderComponent;
         if (renderComponent === 1) { 
@@ -39,6 +40,7 @@ class HomepageContainer extends Component {
         }
     }
 
+    //changes which page is rendered
     changePage=(direction)=> {
         let renderComponent = this.state.renderComponent;
         if( renderComponent === this.state.maxRender && direction === 1) {

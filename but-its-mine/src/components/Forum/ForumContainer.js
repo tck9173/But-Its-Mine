@@ -21,16 +21,19 @@ class ForumContainer extends Component {
         }
     }
 
+    //pulls all posts from backend
     readAllPosts = async () => {
         const posts = await indexPosts();
         this.setState({posts})
     }
 
+    //pulls all comments from backend
     readAllComments = async () => {
         const comments = await indexComments();
         this.setState({comments})
     }
 
+    //creates post and adds it to the database and state
     createPost = async (e,postData) => {
         e.preventDefault();
         const newPost = await postPost(postData);
@@ -42,6 +45,7 @@ class ForumContainer extends Component {
         this.props.history.push('/forum/posts');
     }
 
+    //creates comment and adds it to the database and state
     createComment = async (e,commentData) => {
         e.preventDefault();
         let newComment = await postComment(commentData);
@@ -55,6 +59,7 @@ class ForumContainer extends Component {
         this.props.history.push(`/forum/posts/${newComment.postId}`)
     }
 
+    //updates post in database and state
     updatePost = async (e,id, postData) => {
         e.preventDefault();
         console.log(postData)

@@ -17,6 +17,7 @@ class CreatePostForm extends Component {
         this.setState({[name]:value});
     }
 
+    //renders create comment form
     render() {
         return(
             <div className='postFormWrapper'>

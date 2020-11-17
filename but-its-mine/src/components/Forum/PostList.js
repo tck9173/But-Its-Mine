@@ -12,6 +12,7 @@ class PostList extends Component {
         }
     }
 
+    //orders list based on likes
     sortLists= () => {
         const sortedPosts = this.props.posts.sort((a, b) => (a.likes < b.likes) ? 1 : -1)
         this.setState({sortedPosts})  
