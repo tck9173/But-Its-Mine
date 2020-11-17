@@ -29,6 +29,17 @@
 
 * Post questions and personal builds, comment and react to other peoples builds
 
+### MVP 
+* Simple planning and build guide
+* Embedded Videos for building PC
+* Simple budgeting tool
+* Forum to post own builds and ask questions
+
+### Post MVP
+* Progressive Web App
+* Search feature for forum
+* Mobile styling
+
 ### Screenshots
 #### Main Page
 ![main page](https://i.imgur.com/dY4qUBP.png)
@@ -56,6 +67,11 @@
 * I did not know why PCs were so much better than consoles. Now I do!
 * This site allows me to ask questions to a great community!
 * This helped so much with my budgeting! I did not realize there were so many things to plan for.
+
+### Technologies Used
+* Surge frontend deployment
+* Heroku backend deployment
+* Heroku postgres database
 
 ### Live Link
 [But It's Mine](https://but-its-mine.surge.sh/)
