@@ -10,7 +10,7 @@ function StartContainer() {
             <p>If you are not sure, keep doing your research, post questions in the forum, and do the math to see if if makes sense to build your own.</p>
             <h3>Set Expectations</h3>
             <p>Did we convince you? That's great!</p>
-            <p>Now that we have convinced you we need to set some expectations. In your research you might have seen some beautiful highend watercooled systems complete with triple monitor setup and componanion TV. It is completely fine that your setup is simple, especially for your first build. Your system does not need to please anyone except you.</p>           
+            <p>Now that we have convinced you we need to set some expectations. In your research you might have seen some beautiful highend watercooled systems complete with triple monitor setup and companion TV. It is completely fine that your setup is simple, especially for your first build. Your system does not need to please anyone except you.</p>           
             <p>Before you start planning a to build a PC think realistically what you need it to do. Will you be using this PC for work? Do you want to game at 1080p? Or 1440p? What refresh rate do you want to run at? Everyone wants to game at the highest possible settings, but for your budget that may not be realistic.</p>
             <h3>Planning</h3>
             <p>The planning phase can be the most stressful part of building a PC but it's also the most important. You not only need to plan what performance you need but you need to pick parts that will provide this performance while staying in budget and not causing any bottleneck.</p>

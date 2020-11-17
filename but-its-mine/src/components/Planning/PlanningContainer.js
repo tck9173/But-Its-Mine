@@ -15,7 +15,7 @@ function PlanningContainer() {
             <p>There are seven main components to any PC:</p>
             <ul>
                 <li>CPU - (Central Processing Unit)</li>
-                <li>Motherboard - (Sometimes called main board</li>
+                <li>Motherboard - (Sometimes called main board)</li>
                 <li>Graphics Card - (GPU)</li>
                 <li>Power Supply - (PSU)</li>
                 <li>Memory - (RAM)</li>

@@ -116,7 +116,7 @@ class BudgetTool extends Component {
                             <input type = 'number' name='storage' value={this.state.storage} onChange={this.onChange}/>                         
                         </div>
                         <div className='budgetInputContainer'>
-                            <p>Storage - (0% /{this.state.addStorage ? <span>{parseInt((this.state.addStorage/this.state.budget)*100)}%)</span> : <span>0%)</span>}</p>
+                            <p>Extras Storage - (0% /{this.state.addStorage ? <span>{parseInt((this.state.addStorage/this.state.budget)*100)}%)</span> : <span>0%)</span>}</p>
                             <input type = 'number' name='addStorage' value={this.state.addStorage} onChange={this.onChange}/>                         
                         </div>
                         <div className='budgetInputContainer'>
